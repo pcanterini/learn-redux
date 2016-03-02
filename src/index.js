@@ -12,8 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       videos: [],
-      activeVideo: null,
-      term: ''
+      activeVideo: null
     }
     this.searchVideo('');
   }
@@ -25,8 +24,7 @@ class App extends Component {
     YTSearch({key: API_KEY, term: term}, videos => {
       this.setState({
         videos: videos,
-        activeVideo: videos[0],
-        term: term
+        activeVideo: videos[0]
       });
     });
   }
