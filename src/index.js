@@ -19,8 +19,6 @@ class App extends Component {
 
   searchVideo = (term) => {
 
-    console.log('search', term);
-
     YTSearch({key: API_KEY, term: term}, videos => {
       this.setState({
         videos: videos,
